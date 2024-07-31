@@ -1,0 +1,127 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.Calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #000;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 20px;
+}
+
+.Calculator-Head {
+    background-color: #333;
+    color: white;
+    text-align: right;
+    padding: 15px;
+    font-size: 2em;
+}
+
+.Input-Area {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.Calculator-Body {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Calculator-Body-Row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.Calculator-Body-Row:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    flex: 1;
+    aspect-ratio: 1;
+    padding: 15px;
+    margin: 0 5px;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.2s, border-radius 0.2s;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Number-Button {
+    background-color: #333;
+    color: white;
+}
+
+.Number-Button:hover {
+    background-color: #555;
+}
+
+.Operation-Button,
+.Operation-Button-With-Input-Area {
+    background-color: #ff9500;
+    color: white;
+}
+
+.Operation-Button:hover,
+.Operation-Button-With-Input-Area:hover {
+    background-color: #ffb84d;
+}
+
+.Operation-Button-With-Input-Area {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+.Operation-Button-With-Input-Area:hover {
+    background-color: #c7c7c7;
+}
+
+.Calculator-Body-Row#Calculator-Body-Last-Row > div:first-child {
+    flex: 2;
+}
+
+.Calculator-Body-Row#Calculator-Body-Last-Row .Number-Button {
+    aspect-ratio: auto; 
+    border-radius: 25px; 
+    text-align: left;
+    padding-left: 40px; 
+}
+
+@media (max-width: 400px) {
+    .Calculator-Head {
+        font-size: 1.5em;
+    }
+
+    .Input-Area {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 1.2em;
+    }
+
+    .Calculator-Body-Row#Calculator-Body-Last-Row .Number-Button {
+        padding-left: 30px;
+    }
+}
